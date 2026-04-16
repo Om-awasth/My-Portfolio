@@ -1,0 +1,111 @@
+.contact {
+  position: relative;
+}
+
+.contact-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4.5rem 1.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.2rem;
+  background: radial-gradient(circle at top, rgba(217, 4, 41, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.contact-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  color: var(--color-text);
+  line-height: 1.1;
+  margin-bottom: 2.7rem;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.contact-kicker {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.contact-actions {
+  margin-bottom: 2.8rem;
+}
+
+.email-link {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: all 0.4s ease;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.email-link .arrow {
+  color: var(--color-accent);
+  transition: transform 0.4s ease;
+}
+
+.email-link:hover {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+}
+
+.email-link:hover .arrow {
+  transform: translate(5px, -5px);
+}
+
+.contact-phone {
+  margin-top: 0.9rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+}
+
+.social-item:hover {
+  color: #fff;
+  background-color: rgba(217, 4, 41, 0.2);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 3rem 1.2rem;
+  }
+  .social-item {
+    width: 100%;
+    justify-content: center;
+  }
+}

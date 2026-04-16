@@ -1,0 +1,50 @@
+.build-notes {
+  position: relative;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.note-card {
+  padding: 1.8rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(237, 134, 79, 0.45);
+}
+
+.note-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.note-head h3 {
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+.note-icon {
+  color: var(--color-accent);
+}
+
+.note-card p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+@media (min-width: 900px) {
+  .notes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
