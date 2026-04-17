@@ -1,0 +1,88 @@
+body.custom-cursor-enabled:not(.cursor-text-mode),
+body.custom-cursor-enabled:not(.cursor-text-mode) * {
+  cursor: none !important;
+}
+
+input,
+textarea,
+[contenteditable='true'],
+[data-native-cursor='text'] {
+  cursor: text;
+}
+
+.custom-cursor-ring,
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 3000;
+  transition:
+    opacity 0.16s ease,
+    width 0.16s ease,
+    height 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.2s ease,
+    background-color 0.16s ease;
+  will-change: transform, opacity;
+}
+
+.custom-cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(243, 57, 88, 0.94);
+  box-shadow: 0 0 16px rgba(243, 57, 88, 0.7);
+}
+
+.custom-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(243, 57, 88, 0.48);
+  background: rgba(243, 57, 88, 0.08);
+  box-shadow: 0 0 0 rgba(243, 57, 88, 0);
+}
+
+.custom-cursor-ring.is-hover {
+  width: 48px;
+  height: 48px;
+  border-color: rgba(243, 57, 88, 0.82);
+  background: rgba(243, 57, 88, 0.13);
+  box-shadow: 0 0 24px rgba(243, 57, 88, 0.5);
+}
+
+.custom-cursor-ring.is-pressed,
+.custom-cursor-dot.is-pressed {
+  animation: cursorPress 160ms ease-out;
+}
+
+.custom-cursor-ring.is-hidden,
+.custom-cursor-dot.is-hidden {
+  opacity: 0;
+}
+
+@keyframes cursorPress {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0.82);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (hover: none), (pointer: coarse), (max-width: 900px), (prefers-reduced-motion: reduce) {
+  body.custom-cursor-enabled,
+  body.custom-cursor-enabled * {
+    cursor: auto !important;
+  }
+
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    display: none;
+  }
+}

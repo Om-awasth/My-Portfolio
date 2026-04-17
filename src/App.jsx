@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import BuildNotes from './components/BuildNotes';
 import Contact from './components/Contact';
+import CustomCursor from './components/CustomCursor';
 import { Volume2, VolumeX } from 'lucide-react';
 import './App.css';
 
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <CustomCursor />
       <audio ref={bgmRef} src="/kaze-no-kata.mp3" loop />
 
       <button 

@@ -10,7 +10,7 @@ export const portfolioData = {
   },
   hero: {
     kicker: 'Computer Science Undergraduate',
-    subtitle: 'Skilled in Data Structures, OOP, and full-stack development. I build AI-powered and web applications using React, Node.js, and MongoDB.',
+    subtitle: 'Full-Stack Developer crafting scalable web applications and AI-driven solutions.',
     primaryCta: 'View Projects',
     secondaryCta: 'Contact Me'
   },
